@@ -381,11 +381,22 @@ p{ margin:0 0 8px; line-height:1.55; }
 
 /* ── Preview badge ── */
 .preview-badge{
-  position:fixed; top:12px; right:max(calc(50% - 203px),8px);
-  background:rgba(35,40,79,.88); color:#fff;
-  padding:5px 10px; border-radius:var(--r-pill);
-  font-size:10px; font-weight:800; letter-spacing:.05em;
-  z-index:20; pointer-events:none;
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 10px;
+  background:rgba(35,40,79,.88);
+  color:#fff;
+  padding:5px 10px;
+  border-radius:var(--r-pill);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.05em;
+  z-index:2;
+  pointer-events:none;
+  left:50%;
+  transform:translateX(-50%);
 }
 
 /* ── g-row ── */
@@ -395,7 +406,6 @@ p{ margin:0 0 8px; line-height:1.55; }
 <body>
 <div class="app">
 <div class="soft-bg" aria-hidden="true"></div>
-<div class="preview-badge">OVERVIEW · NOT FOR DISTRIBUTION</div>
 <div id="toast" role="status" aria-live="polite"></div>
 
 <!-- ======================================================
@@ -409,6 +419,7 @@ p{ margin:0 0 8px; line-height:1.55; }
     <div class="dots"><span></span><span></span><span></span></div>
   </div>
 </div>
+<div class="preview-badge">OVERVIEW · NOT FOR DISTRIBUTION</div>
 
 <div class="logo-wrap">
   <div class="logo-lockup">
@@ -418,6 +429,46 @@ p{ margin:0 0 8px; line-height:1.55; }
   </div>
 </div>
 <p class="tagline">Life's essential information — organised, protected and ready when it matters.</p>
+<div style="
+  margin-top:14px;
+  padding:16px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#fffdf8 0%,#f8f1e6 100%);
+  border:1px solid rgba(184,150,58,.22);
+  text-align:center;
+">
+  <div style="
+    display:block;
+    width:100%;
+    font-size: 34px;
+    font-weight: 1000;
+    letter-spacing: .08em;
+    color:#23284f;
+    margin-bottom: 8px;
+    text-transform:uppercase;
+  ">
+    WISH2ME
+  </div>
+
+  <h3 style="
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:800;
+    color:#23284f;
+  ">
+    What if something happened to me?
+  </h3>
+
+  <p style="
+    margin:0;
+    font-size:13.5px;
+    color:#68758d;
+    line-height:1.5;
+  ">
+    Would the people I love know what to do, where to look, or who to call?
+  </p>
+</div>
+
 
 <div class="hero" style="margin-top:18px;">
   <h1>One place for the information your household runs on.</h1>
